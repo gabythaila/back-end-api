@@ -1,0 +1,16 @@
+{
+  "name": "back-end-api",
+  "version": "1.0.0",
+  "description": "Nome: Gabrielly Thaila Moreira de Azevedo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gabrielly Thaila Moreira de Azevedo",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
