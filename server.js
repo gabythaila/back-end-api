@@ -325,14 +325,14 @@ app.put("/imagens/:id", async (req, res) => {
     let imagem = resultado.rows; // Obtém as linhas retornadas pela consulta
 
     // Verifica se a imagem foi encontrada
-    if (questao.length === 0) {
+    if (imagem.length === 0) {
       return res.status(404).json({ message: "Imagem não encontrada" }); // Retorna erro 404 se a questão não for encontrada
     }
 
     const data = req.body; // Obtém os dados do corpo da requisição
 
     // Usa o valor enviado ou mantém o valor atual do banco
-    data.link_imagem = data.link_imagem || questao[0].link_imagem;
+    data.link_imagem = data.link_imagem || imagem[0].link_imagem;
 
     // Atualiza a questão
     consulta ="UPDATE imagens SET link_imagem = $1";
