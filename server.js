@@ -335,7 +335,7 @@ app.put("/imagens/:id", async (req, res) => {
     data.link_imagem = data.link_imagem || imagem[0].link_imagem;
 
     // Atualiza a questão
-    consulta ="UPDATE imagens SET link_imagem = $1";
+    consulta = "UPDATE imagens SET link_imagem = $1 WHERE id = $2";
     // Executa a consulta SQL com os valores fornecidos
     resultado = await db.query(consulta, [
       data.link_imagem,
