@@ -1,0 +1,22 @@
+meta {
+  name: putImagensEspecificaVercel
+  type: http
+  seq: 5
+}
+
+put {
+  url: https://back-end-api-gamma.vercel.app/imagens/2
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "link_imagem" : "images/ImgPort1-WEB.jpeg"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
